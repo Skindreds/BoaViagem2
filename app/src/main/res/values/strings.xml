@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Boa viagem</string>
+    <string name="senha">Senha:</string>
+    <string name="usuario">Usuário:</string>
+    <string name="login">Login</string>
+    <string name="imagem">Imagem</string>
 </resources>
