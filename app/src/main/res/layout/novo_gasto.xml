@@ -6,11 +6,12 @@
         android:layout_height="match_parent"
         android:padding="10dp"
         android:orientation="vertical"
-        android:background="@drawable/piggybank"
+        android:background="#5CCC94"
 
 >
 
     <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Destino"
@@ -44,6 +45,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
     >
         <RadioButton
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lazer"
@@ -108,7 +110,6 @@
               android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
               android:layout_marginEnd="8dp"
               android:id="@+id/txtOrcamento"
-
     />
 
     <TextView
@@ -124,8 +125,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtQuantidadePessoas"
-
-
             app:layout_constraintTop_toBottomOf="@+id/lblQuantidadePessoas" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"/>
@@ -133,6 +132,6 @@
     <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:text="Salvar Orçamento" style="@style/AppTheme" android:backgroundTint="#599950"  />
+            android:layout_marginStart="8dp" android:text="Salvar Orçamento" style="@style/TextColor" android:backgroundTint="#2D8056"  />
 
 </android.support.constraint.ConstraintLayout>
