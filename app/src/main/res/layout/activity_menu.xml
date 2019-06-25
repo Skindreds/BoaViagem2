@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:menu="@menu/menu"
-    />
+            app:itemIconTint="@color/colorPrimaryDark" app:itemTextColor="#2196F3" android:elevation="200dp"/>
 
 
 </LinearLayout>

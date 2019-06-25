@@ -2,5 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/nova_viagem" android:title="Nova Viagem" android:icon="@mipmap/ic_launcher" />
+    <item android:id="@+id/novo_gasto" android:title="Novo Gasto" android:icon="@mipmap/ic_launcher" />
+    <item android:id="@+id/minhas_viagens" android:title="Minhas Viagens" android:icon="@mipmap/ic_launcher" />
+    <item android:id="@+id/config" android:title="Configurações" android:icon="@mipmap/ic_launcher" />
 
 </menu>

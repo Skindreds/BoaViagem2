@@ -5,10 +5,142 @@
              android:layout_height="match_parent"
              tools:context=".nova_viagem">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="#5CCC94"
+
+    >
+
+        <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Destino"
+                android:id="@+id/lblDestino"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmbDestino"
+                app:layout_constraintTop_toBottomOf="@+id/lblDestino" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"></Spinner>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Viagem"
+                android:id="@+id/lblTipoViagem"
+                app:layout_constraintTop_toBottomOf="@+id/cmbDestino" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+        <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdnTipoViagem" app:layout_constraintTop_toBottomOf="@+id/lblTipoViagem"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+        >
+            <RadioButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lazer"
+                    app:layout_constraintTop_toBottomOf="@+id/rdnTipoViagem"
+                    app:layout_constraintStart_toStartOf="@+id/rdnTipoViagem" android:layout_marginStart="8dp"
+                    android:id="@+id/radioButton"/>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trabalho"
+                    app:layout_constraintTop_toBottomOf="@+id/rdnTipoViagem"
+                    app:layout_constraintEnd_toEndOf="@+id/rdnTipoViagem" android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/radioButton" android:layout_marginStart="8dp"/>
+
+        </RadioGroup>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data de chegada"
+                android:id="@+id/lblDataChegada"
+                app:layout_constraintTop_toBottomOf="@+id/rdnTipoViagem" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data de partida"
+                android:id="@+id/lblDataPartida"
+                app:layout_constraintStart_toEndOf="@+id/lblDataChegada"
+                android:layout_marginStart="88dp" app:layout_constraintTop_toBottomOf="@+id/rdnTipoViagem"/>
+
+        <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDataChegada"
+                app:layout_constraintTop_toBottomOf="@+id/lblDataChegada"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+        />
+
+        <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDataPartida"
+                app:layout_constraintTop_toBottomOf="@+id/lblDataPartida"
+                app:layout_constraintStart_toEndOf="@+id/txtDataChegada"
+                android:layout_marginStart="28dp"/>
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orçamento"
+                android:id="@+id/lblOrcamento"
+                app:layout_constraintTop_toBottomOf="@+id/txtDataChegada" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  app:layout_constraintTop_toBottomOf="@+id/lblOrcamento" app:layout_constraintStart_toStartOf="parent"
+                  android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                  android:layout_marginEnd="8dp"
+                  android:id="@+id/txtOrcamento"
+        />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantidade de Pessoas"
+                android:id="@+id/lblQuantidadePessoas"
+                app:layout_constraintTop_toBottomOf="@+id/txtOrcamento" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtQuantidadePessoas"
+                app:layout_constraintTop_toBottomOf="@+id/lblQuantidadePessoas" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"/>
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:text="Salvar Orçamento" style="@style/TextColor" android:backgroundTint="#2D8056"  />
+
+    </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

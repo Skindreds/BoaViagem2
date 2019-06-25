@@ -15,7 +15,9 @@ class MenuActivity : AppCompatActivity() {
             .setOnNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.nova_viagem -> createFragment(nova_viagem())
-
+                    R.id.novo_gasto -> createFragment(novo_gasto())
+                    R.id.minhas_viagens -> createFragment(minhas_viagens())
+                    R.id.config -> createFragment(config())
                     else -> false
                 }
             }
