@@ -1,9 +1,10 @@
 package com.example.myapplication
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.support.design.widget.BottomNavigationView
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuActivity : AppCompatActivity() {
 
@@ -23,7 +24,7 @@ class MenuActivity : AppCompatActivity() {
             }
     }
 
-    private fun createFragment(f: android.support.v4.app.Fragment): Boolean {
+    private fun createFragment(f: Fragment): Boolean {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frame_principal, f)

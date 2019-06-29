@@ -2,7 +2,7 @@ package com.example.myapplication
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +24,7 @@ class minhas_viagens : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nova_viagem, container, false)
+        return inflater.inflate(R.layout.fragment_minhas_viagens, container, false)
     }
 
 

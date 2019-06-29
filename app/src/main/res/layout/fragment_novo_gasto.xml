@@ -4,8 +4,8 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context=".novo_gasto" android:id="@+id/frameLayout">
-    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                 android:layout_height="match_parent" android:padding="20dp">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent" android:padding="20dp">
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,6 +87,6 @@
                 app:layout_constraintBottom_toBottomOf="parent" android:layout_width="match_parent"/>
 
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
