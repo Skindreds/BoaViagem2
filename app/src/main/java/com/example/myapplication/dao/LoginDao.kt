@@ -27,6 +27,9 @@ interface LoginDao {
     @Query("select COUNT(*) from Login where username=:username and password=:password")
     fun findByUsernamePassword(username: String, password: String): Int
 
+    @Query("select COUNT(*) from Login where username=:username")
+    fun findByUsername(username: String): Int
+
 
 
 

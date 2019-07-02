@@ -6,13 +6,17 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.myapplication.domain.Destino
 import com.example.myapplication.domain.Login
+import com.example.myapplication.domain.Viagem
 import kotlin.random.Random
 
-@Database(entities = arrayOf(Login::class), exportSchema = true, version = 2)
+@Database(entities = arrayOf(Login::class,Viagem::class, Destino::class), exportSchema = true, version = 2)
 abstract class Database() : RoomDatabase(){
 
     abstract fun contatoDao(): LoginDao
+    abstract fun viagemDao(): ViagemDao
+    abstract fun destinoDao(): DestinoDao
 
     companion object {
 
@@ -30,7 +34,7 @@ abstract class Database() : RoomDatabase(){
                 instance = Room.databaseBuilder(
                     context,
                     com.example.myapplication.dao.Database::class.java,
-                    "dados" + Math.random()
+                    "dados" + Math.random() + Math.random() + Math.random()
                 )
                     .addMigrations(MIGRATION_1_2)
                     .build()

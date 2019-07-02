@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.myapplication.dao.Database
+import com.example.myapplication.domain.Destino
 import com.example.myapplication.domain.Login
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -37,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                 var contato = withContext(Dispatchers.IO) {
                     contatoDao.findByUsernamePassword(edUsuario.text.trim().toString(), edSenha.text.trim().toString() );
                 }
-                Toast.makeText( this@MainActivity, contato.toString(), Toast.LENGTH_SHORT).show()
                 if ( contato > 0 ) {
                     val menuIntent = Intent(this@MainActivity,
                         MenuActivity::class.java)
@@ -52,6 +52,16 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        val btnCadastro = findViewById<Button>(R.id.btnCadastrar)
+        btnCadastro.setOnClickListener {
+            val edUsuario = findViewById<EditText>(R.id.edUsuario)
+            val cadastroIntent = Intent(this,
+                CadastrarUsuario::class.java)
+                cadastroIntent.putExtra("usuario",
+                edUsuario.text.toString())
+
+            startActivity(cadastroIntent)
+        }
     }
 
     fun loginInvalido(){
@@ -59,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this@MainActivity)
             .setTitle("Login inválido")
             .setMessage("Usuário/Senha inválidos")
-            .setPositiveButton("Ok", {dialog, i -> dialog.dismiss() })
+            .setPositiveButton("Ok", {dialog, _ -> dialog.dismiss() })
             .show()
     }
 
@@ -69,6 +79,12 @@ class MainActivity : AppCompatActivity() {
                 val contatoDao = Database.getInstance(this@MainActivity).contatoDao()
                 val contato = Login("daniel", "123")
                 contatoDao.inserir(contato)
+                val destinoDao = Database.getInstance(this@MainActivity).destinoDao()
+                destinoDao.inserir(Destino("Blumenau"))
+                destinoDao.inserir(Destino("Gaspar"))
+                destinoDao.inserir(Destino("Brusque"))
+                destinoDao.inserir(Destino("Timbó"))
+                destinoDao.inserir(Destino("Floripa"))
             }
         }
     }
